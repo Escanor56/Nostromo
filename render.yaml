@@ -1,7 +1,11 @@
 services:
   - type: web
-    name: email-automation-app
-    env: python
-    buildCommand: ""
+    name: flask-email-sender
+    runtime: python
+    buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
-    plan: free
+    envVars:
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
