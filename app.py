@@ -16,6 +16,9 @@ app = Flask(__name__)
 SMTP_USER = os.getenv("SMTP_USER")
 SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 
+@app.route("/health")
+def health():
+    return "OK", 200
 
 @app.route("/", methods=["GET", "POST"])
 def send_emails():

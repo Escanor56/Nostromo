@@ -1,9 +1,11 @@
 services:
   - type: web
-    name: flask-email-sender
-    runtime: python
+    name: nostromo
+    env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
+    plan: free
+    healthCheckPath: /health
     envVars:
       - key: SMTP_USER
         sync: false
