@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Email Sender</title>
+</head>
+<body>
+    <h1>Automated Email Sender</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="excel_file">Upload Excel File (with "Email" column):</label>
+        <input type="file" name="excel_file" id="excel_file" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea name="message" rows="5" cols="40" required></textarea><br><br>
+
+        <button type="submit">Send Emails</button>
+    </form>
+</body>
+</html>

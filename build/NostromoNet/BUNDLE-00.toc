@@ -1,0 +1,3 @@
+([('NostromoNet',
+   '/Users/kevinshelly/Downloads/lm-email-bot/dist/NostromoNet',
+   'EXECUTABLE')],)
